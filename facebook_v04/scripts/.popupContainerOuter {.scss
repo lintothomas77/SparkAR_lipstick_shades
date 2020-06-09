@@ -1,0 +1,123 @@
+.popupContainerOuter {
+    background: rgba(0, 0, 0, .7);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    display: none;
+    left: 0;
+    top: 0;
+}
+
+.popupContainerOuter.showPopup {
+    display: block;
+}
+
+.buyOnline__btn.button {
+    border: 1px solid #000;
+    display: inline-block;
+    text-align: center;
+    min-width: 100px;
+    padding: 8px;
+    cursor: pointer;
+    margin-right: 5px;
+    color: #000;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.buyOnline__btn.button:hover {
+    background: #000;
+    color: #fff;
+}
+
+.popupContainer {
+    max-width: 100%;
+    font-family: arial;
+    font-size: 13px;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    @media only screen and (max-width: 600px) {
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        overflow: auto;
+    }
+
+    &__close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-family: cursive;
+        font-size: 30px;
+        line-height: 1;
+        cursor: pointer;
+    }
+
+    &__inner {
+        max-width: 1200px;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    &__item {
+        text-align: center;
+        display: inline-flex;
+        margin: 0 20px;
+        min-width: 15%;
+
+        @media only screen and (max-width: 600px) {
+            clear: both;
+        }
+    }
+
+    &__item_link {
+        text-decoration: none;
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    &__image {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+
+        img {
+            max-width: 110px;
+            margin: 0 auto;
+        }
+    }
+
+    &__bagIcon {
+        width: 35px;
+        display: block;
+        clear: both;
+        float: left;
+        max-width: 18%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__buyNow {
+        vertical-align: top;
+        padding: 6px 0;
+        text-align: left;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+        text-transform: uppercase;
+        float: right;
+        width: 80%;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+    }
+}
+
+#content .sticky-wrapper {
+    z-index: 511;
+}
